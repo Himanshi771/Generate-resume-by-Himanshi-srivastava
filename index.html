@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="resume-form">
+            <h1>Resume Generator By Himanshi srivastava</h1>
+            
+            <h2>Personal Information</h2>
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="linkedin" placeholder="LinkedIn URL">
+            <input type="text" id="phone" placeholder="Phone">
+            
+            <h2>Objective</h2>
+            <textarea id="objective" placeholder="Professional Objective"></textarea>
+            
+            <h2>Education</h2>
+            <div id="education-fields">
+                <div class="section-item">
+                    <input type="text" placeholder="Degree" class="degree">
+                    <input type="text" placeholder="Institution" class="institution">
+                    <input type="text" placeholder="Year/Duration" class="duration">
+                    <input type="text" placeholder="CGPA/Score" class="score">
+                </div>
+            </div>
+            <button id="add-education">+ Add Education</button>
+            
+            <h2>Skills</h2>
+            <div id="skills-fields">
+                <div class="section-item">
+                    <input type="text" placeholder="Skill Category" class="skill-category">
+                    <textarea placeholder="Skills (comma separated)" class="skills"></textarea>
+                </div>
+            </div>
+            <button id="add-skill">+ Add Skill Category</button>
+            
+            <h2>Certifications</h2>
+            <div id="certification-fields">
+                <div class="section-item">
+                    <input type="text" placeholder="Certification Name" class="cert-name">
+                    <input type="text" placeholder="Issuing Organization" class="cert-org">
+                </div>
+            </div>
+            <button id="add-certification">+ Add Certification</button>
+            
+            <h2>Work Experience</h2>
+            <div id="experience-fields">
+                <div class="section-item">
+                    <input type="text" placeholder="Job Title" class="job-title">
+                    <input type="text" placeholder="Company" class="company">
+                    <input type="text" placeholder="Duration" class="duration">
+                    <textarea placeholder="Description (one per line)" class="description"></textarea>
+                </div>
+            </div>
+            <button id="add-experience">+ Add Experience</button>
+            
+            <h2>Projects</h2>
+            <div id="project-fields">
+                <div class="section-item">
+                    <input type="text" placeholder="Project Name" class="project-name">
+                    <textarea placeholder="Project Description" class="project-desc"></textarea>
+                </div>
+            </div>
+            <button id="add-project">+ Add Project</button>
+            
+            <button id="generate-resume">Generate Resume</button>
+        </div>
+        
+        <div class="resume-preview" id="resume-preview">
+            <h1 class="preview-name" id="preview-name">YOUR NAME</h1>
+            <div class="contact-info">
+                <span id="preview-email">email@example.com</span>
+                <span>•</span>
+                <span id="preview-linkedin">linkedin.com/in/yourprofile</span>
+                <span>•</span>
+                <span id="preview-phone">(123) 456-7890</span>
+            </div>
+            
+            <h2 class="section-title">OBJECTIVE</h2>
+            <p id="preview-objective">Your professional objective statement goes here.</p>
+            
+            <h2 class="section-title">EDUCATION</h2>
+            <div id="preview-education"></div>
+            
+            <h2 class="section-title">SKILLS</h2>
+            <div id="preview-skills"></div>
+            
+            <h2 class="section-title">CERTIFICATIONS</h2>
+            <ul id="preview-certifications"></ul>
+            
+            <h2 class="section-title">WORK EXPERIENCE</h2>
+            <div id="preview-experience"></div>
+            
+            <h2 class="section-title">PROJECTS</h2>
+            <div id="preview-projects"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
